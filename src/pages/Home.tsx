@@ -6,8 +6,8 @@ const Home = () => {
   const navigate = useNavigate();
 
   return (
-    <div className="flex flex-col justify-center items-center">
-      <h1 className="text-4xl font-bold text-white">
+    <div className="flex flex-col justify-center items-center min-h-screen bg-cover bg-center">
+      <h1 className="text-4xl font-bold text-white bg-black bg-opacity-50 p-4 rounded">
         Welcome to Vite + React + Tailwind CSS
       </h1>
       <img src={reactLogo} alt="React Logo" className="h-32 mt-8" />
