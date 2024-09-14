@@ -17,6 +17,12 @@ const Home = () => {
         Wa chismear
       </button>
       <button
+        className="bg-green-500 hover:bg-green-700 text-white font-bold py-2 px-4 rounded mt-8"
+        onClick={() => navigate("/location")}
+      >
+        Donde juegan
+      </button>
+      <button
         className="bg-red-500 hover:bg-red-700 text-white font-bold py-2 px-4 rounded mt-8"
         onClick={() => navigate("/exit")}
       >
