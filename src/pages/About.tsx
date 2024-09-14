@@ -5,23 +5,28 @@ const About = () => {
   const navigate = useNavigate();
 
   const character = {
-    name: "John Doe",
-    nickname: "The Brave",
-    pic: "https://www.thesportsdb.com/images/media/player/thumb/9xqjxv1624190974.jpg", // Replace with a valid image URL
+    name: "Henry Bustos",
+    nickname: "Marronsor",
+    position: "Defensa, Mediocampista, Arrecho",
+    pic: "https://randomuser.me/api/portraits/men/0.jpg",
     stats: {
-      attack: 80,
-      defense: 70,
-      speed: 90,
+      attack: 35,
+      defense: 44,
+      speed: 22,
+      endurance: 50,
+      weight: 70,
+      physical: 75,
     },
     abilities: ["Swordsmanship", "Archery", "Stealth"],
   };
 
   return (
-    <div className="flex flex-col items-center min-h-screen bg-gray-800 p-4">
-      <h1 className="text-4xl font-bold text-white mb-8">About</h1>
+    <div className="flex flex-col items-center min-h-screen p-4">
+      <h1 className="text-4xl font-bold text-white mb-8">Jugadorazos</h1>
       <Card
         name={character.name}
         nickname={character.nickname}
+        position={character.position}
         pic={character.pic}
         stats={character.stats}
         abilities={character.abilities}

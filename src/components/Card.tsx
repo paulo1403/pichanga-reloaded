@@ -4,10 +4,14 @@ interface CardProps {
   name: string;
   nickname: string;
   pic: string;
+  position: string;
   stats: {
     attack: number;
     defense: number;
     speed: number;
+    endurance: number;
+    weight: number;
+    physical: number;
   };
   abilities: string[];
 }
@@ -16,6 +20,7 @@ const Card: React.FC<CardProps> = ({
   name,
   nickname,
   pic,
+  position,
   stats,
   abilities,
 }) => {
@@ -28,17 +33,21 @@ const Card: React.FC<CardProps> = ({
       />
       <div className="px-6 py-4">
         <div className="font-bold text-2xl mb-2 text-gray-800">{name}</div>
-        <p className="text-gray-600 text-base italic mb-4">{nickname}</p>
+        <p className="text-gray-600 text-base italic mb-2">{nickname}</p>
+        <p className="text-gray-600 text-base mb-4">Posición: {position}</p>
         <div className="mt-4">
           <h3 className="font-bold text-gray-700">Stats:</h3>
-          <ul className="list-none text-gray-600">
-            <li>Attack: {stats.attack}</li>
-            <li>Defense: {stats.defense}</li>
-            <li>Speed: {stats.speed}</li>
-          </ul>
+          <div className="grid grid-cols-2 gap-4 text-gray-600 text-left">
+            <div>Ataque: {stats.attack}</div>
+            <div>Defensa: {stats.defense}</div>
+            <div>Vel: {stats.speed}</div>
+            <div>Resistencia: {stats.endurance}</div>
+            <div>Peso: {stats.weight}</div>
+            <div>Fisico: {stats.physical}</div>
+          </div>
         </div>
         <div className="mt-4">
-          <h3 className="font-bold text-gray-700">Abilities:</h3>
+          <h3 className="font-bold text-gray-700">Habilidades:</h3>
           <div className="flex flex-wrap gap-2">
             {abilities.map((ability, index) => (
               <span
