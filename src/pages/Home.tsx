@@ -1,9 +1,18 @@
 import baloncito from "../assets/people/BALON.webp";
 import { useNavigate } from "react-router-dom";
 import ParticlesBackground from "../components/ParticlesBackground";
+import gemidito from "../assets/people/gemidito.ogg";
+import { useRef } from "react";
 
 const Home = () => {
   const navigate = useNavigate();
+  const audioRef = useRef<HTMLAudioElement>(null);
+
+  const playAudio = () => {
+    if (audioRef.current) {
+      audioRef.current.play();
+    }
+  };
 
   return (
     <div className="relative flex flex-col justify-center items-center min-h-screen bg-cover bg-center">
@@ -30,6 +39,13 @@ const Home = () => {
       >
         Alamos, mongol
       </button>
+      <button
+        className="bg-purple-500 hover:bg-purple-700 text-white font-bold py-2 px-4 rounded mt-8 z-10"
+        onClick={playAudio}
+      >
+        Soy sapazo!
+      </button>
+      <audio ref={audioRef} src={gemidito} />
     </div>
   );
 };
