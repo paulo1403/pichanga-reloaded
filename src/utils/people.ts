@@ -4,6 +4,7 @@ import gustavoPic from "../assets/people/Gordazo.jpg";
 import percyPic from "../assets/people/Percy.jpg";
 import omarPic from "../assets/people/Omar.jpg";
 import walterPic from "../assets/people/WALTER.jpg";
+import chuquiPic from "../assets/people/Chuqui.jpg";
 
 const characters = [
   {
@@ -95,6 +96,21 @@ const characters = [
       physical: 80,
     },
     abilities: ["Tragon", "Menores Hunter", "Debut y Retiro", "Falta uña"],
+  },
+  {
+    name: "Angel Chuquiyuri",
+    nickname: "Chuqui",
+    position: "Delantero, Mediocampista, Arquero",
+    pic: chuquiPic,
+    stats: {
+      attack: 85,
+      defense: 40,
+      speed: 90,
+      endurance: 75,
+      weight: 65,
+      physical: 80,
+    },
+    abilities: ["Chuky", "Bajito", "Capitan"],
   },
 ];
 
