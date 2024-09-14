@@ -20,26 +20,35 @@ const Card: React.FC<CardProps> = ({
   abilities,
 }) => {
   return (
-    <div className="max-w-sm rounded overflow-hidden shadow-lg bg-white">
-      <img className="w-full" src={pic} alt={`${name} picture`} />
+    <div className="max-w-sm rounded-lg overflow-hidden shadow-lg bg-white border border-gray-200">
+      <img
+        className="w-full h-48 object-cover"
+        src={pic}
+        alt={`${name} picture`}
+      />
       <div className="px-6 py-4">
-        <div className="font-bold text-xl mb-2">{name}</div>
-        <p className="text-gray-700 text-base">{nickname}</p>
+        <div className="font-bold text-2xl mb-2 text-gray-800">{name}</div>
+        <p className="text-gray-600 text-base italic mb-4">{nickname}</p>
         <div className="mt-4">
-          <h3 className="font-bold">Stats:</h3>
-          <ul className="list-disc list-inside">
+          <h3 className="font-bold text-gray-700">Stats:</h3>
+          <ul className="list-none text-gray-600">
             <li>Attack: {stats.attack}</li>
             <li>Defense: {stats.defense}</li>
             <li>Speed: {stats.speed}</li>
           </ul>
         </div>
         <div className="mt-4">
-          <h3 className="font-bold">Abilities:</h3>
-          <ul className="list-disc list-inside">
+          <h3 className="font-bold text-gray-700">Abilities:</h3>
+          <div className="flex flex-wrap gap-2">
             {abilities.map((ability, index) => (
-              <li key={index}>{ability}</li>
+              <span
+                key={index}
+                className="inline-block bg-blue-200 text-blue-800 text-sm font-semibold px-3 py-1 rounded-full"
+              >
+                {ability}
+              </span>
             ))}
-          </ul>
+          </div>
         </div>
       </div>
     </div>
