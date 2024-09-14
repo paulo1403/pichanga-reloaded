@@ -8,7 +8,7 @@ const About = () => {
   return (
     <div className="flex flex-col items-center min-h-screen p-4">
       <h1 className="text-4xl font-bold text-white mb-8">Jugadorazos</h1>
-      <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+      <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
         {characters.map((character, index) => (
           <Card
             key={index}
