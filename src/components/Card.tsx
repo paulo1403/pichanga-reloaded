@@ -48,7 +48,7 @@ const Card: React.FC<CardProps> = ({
         </div>
         <div className="mt-4">
           <h3 className="font-bold text-gray-700">Habilidades:</h3>
-          <div className="flex flex-wrap gap-2">
+          <div className="flex flex-wrap justify-center gap-2">
             {abilities.map((ability, index) => (
               <span
                 key={index}
